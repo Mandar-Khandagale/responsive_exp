@@ -143,3 +143,119 @@ class OrientationBuilderExp extends StatelessWidget {
     );
   }
 }
+
+class AspectRatioExp extends StatelessWidget {
+  const AspectRatioExp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      alignment: Alignment.center,
+      color: Colors.blue,
+      padding: const EdgeInsets.all(8.0),
+      child: AspectRatio(
+        aspectRatio: 6 / 9,
+        child: Container(
+          color: Colors.green,
+        ),
+      ),
+    );
+  }
+}
+
+class FittedBoxExp extends StatelessWidget {
+  const FittedBoxExp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Fitted Box Exp"),
+      ),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            children: [
+              Container(
+                height: 200,
+                width: 500,
+                color: Colors.red,
+                child: FittedBox(
+                  alignment: Alignment.center,
+                  fit: BoxFit.fitHeight,
+                  child: Image.network(
+                      'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl-2.jpg'),
+                ),
+              ),
+
+              /// if we add fitted box it will ignore the size of text and try to fit in the parent size
+              /// if smaller text size is placed inside a bigger container it will be scale up and ignore the text size
+              Padding(
+                padding: const EdgeInsets.all(18.0),
+                child: Container(
+                  width: 300,
+                  height: 50,
+                  color: Colors.amber,
+                  padding: const EdgeInsets.all(8.0),
+                  child: const FittedBox(
+                    fit: BoxFit.scaleDown, /// never scale-up
+                    child: Text(
+                      "Very Long Text.............",
+                      style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+
+class FractionallySizedBoxExp extends StatelessWidget {
+  const FractionallySizedBoxExp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Fractionally SizedBox Exp"),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            FractionallySizedBox(
+              widthFactor: 0.3,
+              child: ElevatedButton(
+                onPressed: () {},
+                child: const Text("Press me"),
+              ),
+            ),
+            Container(
+              height: 300,
+              width: 300,
+              color: Colors.amber,
+              child: FractionallySizedBox(
+                widthFactor: 0.8,
+                heightFactor: 0.1,
+                child: ElevatedButton(
+                  onPressed: () {},
+                  child: const Text("Click me"),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
