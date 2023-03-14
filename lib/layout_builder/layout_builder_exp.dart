@@ -1,4 +1,3 @@
-import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
@@ -87,13 +86,14 @@ class LayoutBuilderExp extends StatelessWidget {
 }
 
 class MediaQueryExp extends StatelessWidget {
-  var size, height, width, textScale;
-  MediaQueryData mediaQueryData = const MediaQueryData();
 
-  MediaQueryExp({Key? key}) : super(key: key);
+  const MediaQueryExp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    MediaQueryData mediaQueryData = const MediaQueryData();
+    Size size;
+    double height, width, textScale;
     debugPrint("----------------build---------------");
     // getting the size of the window
     mediaQueryData = MediaQuery.of(context);
@@ -102,7 +102,7 @@ class MediaQueryExp extends StatelessWidget {
     width = size.width;
     textScale = mediaQueryData.textScaleFactor;
 
-    debugPrint("height::$height width::$width");
+    debugPrint("height::$height width::$width textScale::$textScale");
 
     debugPrint("${MediaQuery.of(context).textScaleFactor}");
 
@@ -129,9 +129,9 @@ class OrientationBuilderExp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const x = " ";
-    final z = "";
-    debugPrint("-------------build---------------");
+    final  x;
+    x = 10;
+    debugPrint("-------------build---------------$x");
     return Scaffold(
       appBar: AppBar(
         title: const Text("Orientation Builder Exp"),

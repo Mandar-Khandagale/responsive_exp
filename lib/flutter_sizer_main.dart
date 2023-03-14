@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_sizer/flutter_sizer.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return FlutterSizer(
@@ -15,13 +17,15 @@ class MyApp extends StatelessWidget {
             theme: ThemeData(
               primarySwatch: Colors.blue,
             ),
-            home: Home());
+            home: const Home());
       },
     );
   }
 }
 
 class Home extends StatelessWidget {
+  const Home({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,11 +51,11 @@ class Home extends StatelessWidget {
                 style: TextStyle(fontSize: 24.0.dp), // or Adaptive.sp(12)
               ),
               Device.orientation == Orientation.portrait
-                  ? Text("My Orientation is Portrait")
-                  : Text("My Orientation is Landscape"),
+                  ? const Text("My Orientation is Portrait")
+                  : const Text("My Orientation is Landscape"),
               Device.screenType == ScreenType.tablet
-                  ? Text("My Screen's Type is a Tablet")
-                  : Text("My Screen's Type is a Phone")
+                  ? const Text("My Screen's Type is a Tablet")
+                  : const Text("My Screen's Type is a Phone")
             ],
           )),
     );

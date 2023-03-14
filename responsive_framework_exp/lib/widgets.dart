@@ -25,7 +25,7 @@ class MenuTextButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextButton(
       style: TextButton.styleFrom(
-        primary: Colors.white,
+        foregroundColor: Colors.white,
         textStyle: const TextStyle(fontWeight: FontWeight.w600),
       ),
       onPressed: () {},
