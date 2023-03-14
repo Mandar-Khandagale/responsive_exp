@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Sizer(builder: (context, orientation, deviceType) {
+      debugPrint(deviceType.name);
       return MaterialApp(
         title: 'Responsive UI',
         debugShowCheckedModeBanner: false,

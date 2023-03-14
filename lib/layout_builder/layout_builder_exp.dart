@@ -183,7 +183,7 @@ class FittedBoxExp extends StatelessWidget {
                 color: Colors.red,
                 child: FittedBox(
                   alignment: Alignment.center,
-                  fit: BoxFit.fitHeight,
+                  fit: BoxFit.fill,
                   child: Image.network(
                       'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl-2.jpg'),
                 ),
@@ -195,11 +195,11 @@ class FittedBoxExp extends StatelessWidget {
                 padding: const EdgeInsets.all(18.0),
                 child: Container(
                   width: 300,
-                  height: 50,
+                  height: 100,
                   color: Colors.amber,
                   padding: const EdgeInsets.all(8.0),
-                  child: const FittedBox(
-                    fit: BoxFit.scaleDown, /// never scale-up
+                  child: FittedBox(
+                    fit:BoxFit.scaleDown,
                     child: Text(
                       "Very Long Text.............",
                       style: TextStyle(
