@@ -129,7 +129,7 @@ class OrientationBuilderExp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final  x;
+    final  int x;
     x = 10;
     debugPrint("-------------build---------------$x");
     return Scaffold(
