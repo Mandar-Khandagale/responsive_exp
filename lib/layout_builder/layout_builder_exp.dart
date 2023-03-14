@@ -129,6 +129,7 @@ class OrientationBuilderExp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const x = "";
     debugPrint("-------------build---------------");
     return Scaffold(
       appBar: AppBar(
