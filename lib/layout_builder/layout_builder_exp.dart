@@ -199,7 +199,7 @@ class FittedBoxExp extends StatelessWidget {
                   height: 100,
                   color: Colors.amber,
                   padding: const EdgeInsets.all(8.0),
-                  child: FittedBox(
+                  child: const FittedBox(
                     fit:BoxFit.scaleDown,
                     child: Text(
                       "Very Long Text.............",
