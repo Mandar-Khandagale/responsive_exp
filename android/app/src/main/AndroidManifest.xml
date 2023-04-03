@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.responsive_flutter_app">
    <application
-        android:label="responsive_flutter_app"
+        android:label="Responsive Exp"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

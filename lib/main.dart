@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_flutter_app/demo_ui.dart';
 import 'package:responsive_flutter_app/layout_builder/layout_builder_exp.dart';
 
 void main() {
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home:  const OrientationBuilderExp(),
+      home:  const DemoUI(),
     );
   }
 }
