@@ -22,7 +22,7 @@ class _LoginScreenState extends State<LoginScreen> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          SizerUtil.orientation == Orientation.portrait
+          Device.orientation == Orientation.portrait
               ? SizedBox(
                   height: 20.h,
                   child: Image.network(
